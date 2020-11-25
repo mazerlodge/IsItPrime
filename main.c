@@ -12,7 +12,7 @@
 int main(int argc, const char * argv[]) {
 	
 	if (argc < 2) {
-		printf("Usage: One integer argument, e.g. isItPrime 58811");
+		printf("Usage: One integer argument, e.g. isItPrime 58811\n");
 		return -1;
 		
 	}
