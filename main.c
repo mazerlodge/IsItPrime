@@ -14,23 +14,24 @@ int main(int argc, const char * argv[]) {
 	if (argc < 2) {
 		printf("Usage: One integer argument, e.g. isItPrime 58811\n");
 		return -1;
-		
 	}
 	
 	if ((argc == 3) && (strncmp(argv[2], "42", 2) == 0))
 		printf("Build Path: %s\n", argv[0]);
-	
 
 	int targetVal = atoi(argv[1]);
+	int divisorCount = 0;
 
 	for (int x=2; x<targetVal; x++) {
 		int remainder = targetVal % x;
-		
-		if (remainder == 0)
+		if (remainder == 0) {
 			printf("%d evenly divisible by %d\n", targetVal, x);
-		
+			divisorCount++;
+		}
 	}
-	
-	
+
+	if (divisorCount == 0)
+		printf("%d is prime.\n", targetVal);
+
 	return 0;
 }
